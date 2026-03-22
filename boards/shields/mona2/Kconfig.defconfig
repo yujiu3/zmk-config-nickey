@@ -1,22 +1,12 @@
-if SHIELD_TWEAKBIT_R
+if SHIELD_MONA2_R
 
 config ZMK_KEYBOARD_NAME
-    default "tweakbit"
+    default "mona2"
 
 config ZMK_BLE
     default y
 
 config ZMK_SPLIT_ROLE_CENTRAL
-    default y
-
-endif
-
-if SHIELD_TWEAKBIT_R || SHIELD_TWEAKBIT_L
-
-config NFCT_PINS_AS_GPIOS
-    default y
-
-config ZMK_SPLIT
     default y
 
 config INPUT
@@ -31,7 +21,14 @@ config SPI
 config PMW3610
     default y
 
-config PMW3610_SWAP_XY
+endif
+
+if SHIELD_MONA2_R || SHIELD_MONA2_L
+
+config NFCT_PINS_AS_GPIOS
+    default y
+
+config ZMK_SPLIT
     default y
 
 config RGBLED_WIDGET_BATTERY_LEVEL_HIGH

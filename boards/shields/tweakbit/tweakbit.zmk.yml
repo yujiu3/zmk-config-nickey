@@ -1,8 +1,0 @@
-file_format: "1"
-id: tweakbit
-name: tweakbit
-type: shield
-url: https://github.com/sayu-hub/zmk-config-tweakbit
-requires: [seeeduino_xiao_ble]
-features:
-  - keys

@@ -1,0 +1,2 @@
+# zmk-config-nickey
+nickey

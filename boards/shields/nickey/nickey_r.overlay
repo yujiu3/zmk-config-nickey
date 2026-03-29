@@ -6,6 +6,43 @@
     col-offset = <6>;
 };
 
+&pinctrl {
+    i2c0_default: i2c0_default {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 4)>,
+                    <NRF_PSEL(TWIM_SCL, 0, 5)>;
+        };
+    };
+
+    i2c0_sleep: i2c0_sleep {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 4)>,
+                    <NRF_PSEL(TWIM_SCL, 0, 5)>;
+            low-power-enable;
+        };
+    };
+};
+
+&i2c0 {
+    status = "okay";
+    compatible = "nordic,nrf-twim";
+    pinctrl-0 = <&i2c0_default>;
+    pinctrl-1 = <&i2c0_sleep>;
+    pinctrl-names = "default", "sleep";
+
+    pointing_device: pointing_device@57 {
+        compatible = "sekigon,lpps";
+        reg = <0x57>;
+        irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    };
+};
+
+/ {
+    pointing_listener {
+        compatible = "zmk,input-listener";
+        device = <&pointing_device>;
+    };
+};
 &kscan0 {
         col-gpios
             = <&xiao_d 0 GPIO_ACTIVE_HIGH>

@@ -24,5 +24,8 @@ manifest:
     - name: zmk-input-processor-keybind
       remote: zettaface
       revision: main
+    - name: zmk-driver-lpps
+      url: https://github.com/sekigon-gonnoc/zmk-driver-lpps
+      revision: master
   self:
     path: config

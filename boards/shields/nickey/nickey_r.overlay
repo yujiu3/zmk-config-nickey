@@ -29,11 +29,13 @@
     pinctrl-0 = <&i2c0_default>;
     pinctrl-1 = <&i2c0_sleep>;
     pinctrl-names = "default", "sleep";
+    clock-frequency = <I2C_BITRATE_FAST>;
 
     pointing_device: pointing_device@57 {
+        status = "okay";
         compatible = "lpps";
         reg = <0x57>;
-        irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        irq-gpios = <&gpio0 2 GPIO_PULL_UP>;
     };
 };
 
@@ -41,6 +43,7 @@
     pointing_listener {
         compatible = "zmk,input-listener";
         device = <&pointing_device>;
+        status = "okay";
     };
 };
 

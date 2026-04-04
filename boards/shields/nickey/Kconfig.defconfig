@@ -1,12 +1,21 @@
 if SHIELD_NICKEY_R
 
 config ZMK_KEYBOARD_NAME
-    default "nickey"
+    default "mona2"
 
 config ZMK_BLE
     default y
 
 config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+config INPUT
+    default y
+
+config ZMK_POINTING
+    default y
+
+config SPI
     default y
 
 config PMW3610

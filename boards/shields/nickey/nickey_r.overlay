@@ -21,6 +21,7 @@
     pointing_stick_ext_listener: pointing_stick_ext_listener {
         compatible = "zmk,input-listener";
         device = <&pointing_stick_ext>;
+        status = "okay";
     };
 };
 

@@ -1,4 +1,4 @@
-if SHIELD_NICKEY_R
+if SHIELD_MONA2_R
 
 config ZMK_KEYBOARD_NAME
     default "mona2"
@@ -23,7 +23,7 @@ config PMW3610
 
 endif
 
-if SHIELD_NICKEY_R || SHIELD_NICKEY_L
+if SHIELD_MONA2_R || SHIELD_MONA2_L
 
 config NFCT_PINS_AS_GPIOS
     default y

@@ -1,4 +1,4 @@
-#include "nickey.dtsi"
+#include "mona2.dtsi"
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
@@ -44,11 +44,11 @@
     pinctrl-0 = <&spi0_default>;
     pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default", "sleep";
-    cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;  //P0.09を指定(CS)
+    cs-gpios = <&gpio0 3 GPIO_ACTIVE_LOW>;  //P0.09を指定(CS)
 
     trackball_central: trackball_central@0 {
         status = "okay";
-        compatible = "pixart,pmw3610-alt";  //トラボセンサ用のドライバとバインド
+        compatible = "pixart,pmw3610";  //トラボセンサ用のドライバとバインド
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; //P0.02を指定(MOTION)

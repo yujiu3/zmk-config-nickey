@@ -60,5 +60,6 @@
         irq-gpios = <&gpio0 9 GPIO_PULL_UP>;
         // scroller-mode;
         // v-invert;
+        wakeup-source; //スリープ状態からの復帰に利用
     };
 };

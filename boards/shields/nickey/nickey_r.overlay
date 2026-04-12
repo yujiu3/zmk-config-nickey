@@ -20,8 +20,7 @@
     trackpad_listener: trackpad_listener {
         compatible = "zmk,input-listener";
         device = <&trackpad>;
-        input-processors = <&zip_xy_to_scroll_mapper
-                            &zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
+        input-processors = <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
     };
 };
 

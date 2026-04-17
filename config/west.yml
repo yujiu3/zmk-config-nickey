@@ -10,6 +10,8 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: zettaface  # <-- Input Processor Keybind
       url-base: https://github.com/zettaface
+    - name: sekigon-gonnoc
+      url-base: https://github.com/sekigon-gonnoc
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -23,6 +25,9 @@ manifest:
       revision: v0.3
     - name: zmk-input-processor-keybind
       remote: zettaface
+      revision: main
+    - name: zmk-driver-paw3222
+      remote: sekigon-gonnoc
       revision: main
   self:
     path: config

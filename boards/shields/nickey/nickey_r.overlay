@@ -20,15 +20,14 @@
 &pinctrl {
     spi1_default: spi1_default {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK,  0, 16)>,  /* SCLK: P0.16 */
-                    <NRF_PSEL(SPIM_MOSI, 1,  0)>;  /* SDIO: P1.00 */
-            /* MISOは定義しない（3線SPI） */
+            psels = <NRF_PSEL(SPIM_SCK,  0,  9)>,  /* SCLK: P0.09 */
+                    <NRF_PSEL(SPIM_MOSI, 0, 10)>;  /* SDIO: P0.10 */
         };
     };
     spi1_sleep: spi1_sleep {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK,  0, 16)>,
-                    <NRF_PSEL(SPIM_MOSI, 1,  0)>;
+            psels = <NRF_PSEL(SPIM_SCK,  0,  9)>,
+                    <NRF_PSEL(SPIM_MOSI, 0, 10)>;
             low-power-enable;
         };
     };
@@ -40,14 +39,14 @@
     pinctrl-0 = <&spi1_default>;
     pinctrl-1 = <&spi1_sleep>;
     pinctrl-names = "default", "sleep";
-    cs-gpios = <&gpio1 11 GPIO_ACTIVE_LOW>;  /* CS: P1.11 = D6 */
+    cs-gpios = <&gpio1 11 GPIO_ACTIVE_LOW>;  /* CS: D6=P1.11 */
 
     trackball: trackball@0 {
         status = "okay";
         compatible = "pixart,paw32xx";
         reg = <0>;
         spi-max-frequency = <2000000>;
-        irq-gpios = <&gpio0 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  /* MOTION: P0.09 */
+        irq-gpios = <&gpio1 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  /* MOTION: P1.10 */
     };
 };
 

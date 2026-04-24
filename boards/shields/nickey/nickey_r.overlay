@@ -56,7 +56,7 @@
 };
 
 
-/******
+/*
 &pinctrl {
     spi1_default: spi1_default {
         group1 {
@@ -90,5 +90,5 @@
         irq-gpios = <&gpio0 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  /* MOTION: P0.09 */
     };
 };
-******/
+*/
 

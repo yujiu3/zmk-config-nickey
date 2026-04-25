@@ -21,8 +21,8 @@ config PAW3222
 config SPI
     default y
 
-config PMW3610
-    default y
+#config PMW3610
+#    default y
 
 endif
 

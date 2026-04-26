@@ -19,7 +19,7 @@ config ZMK_POINTING
 config AZ1UBALL
     default y
 
-CONFIG_I2C
+config I2C
     default y
 
 #config SPI

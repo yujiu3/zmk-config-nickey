@@ -15,11 +15,18 @@ config INPUT
 config ZMK_POINTING
     default y
 
-config SPI
+# AZ1UBALL設定
+config AZ1UBALL
     default y
 
-config PMW3610
+CONFIG_I2C
     default y
+
+#config SPI
+#    default y
+#
+#config PMW3610
+#    default y
 
 endif
 

@@ -55,6 +55,11 @@
     };
 };
 
+&trackball_listener {
+	status = "okay";
+	device = <&trackball>;
+};
+
 /* QSPIを無効化してP1.00を解放 */
 &qspi {
     status = "disabled";

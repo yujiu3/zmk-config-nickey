@@ -49,6 +49,7 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio1 10 GPIO_ACTIVE_LOW>;  /* MOTION: P1.10 */
+        force-awake;
     };
 };
 

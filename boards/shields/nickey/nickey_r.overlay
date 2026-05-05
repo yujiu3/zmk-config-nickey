@@ -21,15 +21,15 @@
     spi1_default: spi1_default {
         group1 {
             psels = <NRF_PSEL(SPIM_SCK,  1,  0)>,  /* SCLK: P1.00 */
-                    <NRF_PSEL(SPIM_MOSI, 0, 10)>,  /* SDIO: P0.10 */
-                    <NRF_PSEL(SPIM_MISO, 0, 10)>;  /* SDIO: P0.10 */
+                    <NRF_PSEL(SPIM_MOSI, 0, 16)>,  /* SDIO: P0.16 */
+                    <NRF_PSEL(SPIM_MISO, 0, 16)>;  /* SDIO: P0.16 */
         };
     };
     spi1_sleep: spi1_sleep {
         group1 {
             psels = <NRF_PSEL(SPIM_SCK,  1,  0)>,
-                    <NRF_PSEL(SPIM_MOSI, 0, 10)>,
-                    <NRF_PSEL(SPIM_MISO, 0, 10)>;
+                    <NRF_PSEL(SPIM_MOSI, 0, 16)>,
+                    <NRF_PSEL(SPIM_MISO, 0, 16)>;
             low-power-enable;
         };
     };
@@ -48,8 +48,7 @@
         compatible = "pixart,paw3222";
         reg = <0>;
         spi-max-frequency = <2000000>;
-        irq-gpios = <&gpio1 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;  /* MOTION: P1.10 */
-//        irq-gpios = <&gpio1 10 GPIO_ACTIVE_LOW>;  /* MOTION: P1.10 */
+        irq-gpios = <&gpio1 10 GPIO_ACTIVE_LOW>;  /* MOTION: P1.10 */
     };
 };
 

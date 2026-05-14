@@ -12,8 +12,8 @@ manifest:
       url-base: https://github.com/zettaface
     - name: sekigon-gonnoc
       url-base: https://github.com/sekigon-gonnoc
-    #- name: hsgw              
-      #url-base: https://github.com/hsgw
+    - name: hsgw              
+      url-base: https://github.com/hsgw
   projects:
     - name: zmk
       remote: zmkfirmware

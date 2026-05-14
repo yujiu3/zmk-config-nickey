@@ -34,6 +34,6 @@ projects:
     - name: zmk-feature-sensor_rotation   # ← 追加
       remote: hsgw
       revision: main
-      # import: west.yml
+      import: west.yml
   self:
     path: config

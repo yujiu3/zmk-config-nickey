@@ -14,7 +14,7 @@ manifest:
       url-base: https://github.com/sekigon-gonnoc
     #- name: hsgw              
       #url-base: https://github.com/hsgw
-projects:
+  projects:
     - name: zmk
       remote: zmkfirmware
       revision: v0.3.0
@@ -31,9 +31,9 @@ projects:
     - name: zmk-driver-paw3222
       remote: sekigon-gonnoc
       revision: main
-    #- name: zmk-feature-sensor_rotation   # ← 追加
-      #remote: hsgw
-      #revision: main
-      #import: west.yml
+    - name: zmk-feature-sensor_rotation   # ← 追加
+      remote: hsgw
+      revision: main
+      import: west.yml
   self:
     path: config

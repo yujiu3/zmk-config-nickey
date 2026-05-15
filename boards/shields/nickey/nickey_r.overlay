@@ -55,18 +55,11 @@
     };
 };
 
+&sensor_rotation {
+    rotation-angle = <288>;
+};
 
 / {
-    /* ① 回転プロセッサの定義 */
-    input_processors {
-        sensor_rotation: sensor_rotation {
-            compatible = "zmk,input-processor-sensor-rotation";
-            input-processor-cells = <0>;
-            rotation-angle = <288>;   // ← 回転角度（0〜360度）
-        };
-    };
-
-    /* ② トラックボールのリスナーに接続 */
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;

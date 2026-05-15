@@ -70,6 +70,6 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        #input-processors = <&sensor_rotation>;
+        input-processors = <&sensor_rotation>;
     };
 };

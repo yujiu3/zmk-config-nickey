@@ -1,7 +1,7 @@
 #include "nickey.dtsi"
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
-#include "input/processors/sensor_rotation.dtsi"   // ← 追加
+// #include "input/processors/sensor_rotation.dtsi"   // ← 追加
 
 &default_transform {
     col-offset = <6>;
@@ -59,6 +59,7 @@
         sensor_rotation: sensor_rotation {
             compatible = "zmk,input-processor-sensor-rotation";
             #input-processor-cells = <0>;
+						rotation-angle = <0>;
         };
     };
 

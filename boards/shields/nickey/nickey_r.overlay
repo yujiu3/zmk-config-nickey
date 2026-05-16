@@ -1,7 +1,7 @@
 #include "nickey.dtsi"
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
-#include "input/processors/sensor_rotation.dtsi"
+// #include "input/processors/sensor_rotation.dtsi"
 
 &default_transform {
     col-offset = <6>;

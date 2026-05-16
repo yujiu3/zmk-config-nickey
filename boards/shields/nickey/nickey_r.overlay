@@ -54,6 +54,8 @@
     };
 };
 
+/********
+
 / {                                                  // ← 追加
     input_processors {
         sensor_rotation: sensor_rotation {
@@ -68,3 +70,4 @@
         input-processors = <&sensor_rotation>;
     };
 };
+********/

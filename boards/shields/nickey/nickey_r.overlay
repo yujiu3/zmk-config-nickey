@@ -1,7 +1,8 @@
 #include "nickey.dtsi"
 #include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
-#include "input/processors/sensor_rotation.dtsi"
+//#include "input/processors/sensor_rotation.dtsi"
 
 &default_transform {
     col-offset = <6>;
@@ -54,6 +55,7 @@
     };
 };
 
+/**********
 / {
     input_processors {
         sensor_rotation: sensor_rotation {
@@ -62,9 +64,12 @@
 			rotation-angle = <190>;
         };
     };
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        input-processors = <&sensor_rotation>;
-    };
+};
+**********/
+
+trackball_listener {
+    compatible = "zmk,input-listener";
+    device = <&trackball>;
+    //input-processors = <&sensor_rotation>;
+    input-processors = <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>;
 };

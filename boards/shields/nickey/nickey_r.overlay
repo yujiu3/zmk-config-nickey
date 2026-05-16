@@ -55,6 +55,8 @@
 };
 
 / {
+
+/*****
     input_processors {
         sensor_rotation: sensor_rotation {
             compatible = "zmk,input-processor-sensor-rotation";
@@ -62,9 +64,11 @@
 			rotation-angle = <285>;
         };
     };
+*****/
+
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
-        input-processors = <&sensor_rotation>;
+        // input-processors = <&sensor_rotation>;
     };
 };
